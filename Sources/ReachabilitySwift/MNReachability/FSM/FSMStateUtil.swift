@@ -10,7 +10,7 @@ import Foundation
 
 
 open class FSMStateUtil {
-    static open func RRStateFromValue(_ LCEventValue:String) -> RRStateID {
+    static public func RRStateFromValue(_ LCEventValue:String) -> RRStateID {
         if LCEventValue == kParamValueUnReachable {
             return RRStateID.rrStateUnReachable
         }
@@ -25,7 +25,7 @@ open class FSMStateUtil {
         }
     }
     
-    static open func RRStateFromPingFlag(_ isSuccess:Bool) -> RRStateID {
+    static public func RRStateFromPingFlag(_ isSuccess:Bool) -> RRStateID {
         let status:LocalConnectionStatus = LocalConnection.shareInstance.currentLocalConnectionStatus()
         
         if !isSuccess {

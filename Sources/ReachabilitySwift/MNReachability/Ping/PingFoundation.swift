@@ -130,11 +130,11 @@ enum kICMPType:Int {
   
    
     //MARK: - static init
-    static open func pingFoundationWithHostName(_ hostName:String) -> PingFoundation {
+    static public func pingFoundationWithHostName(_ hostName:String) -> PingFoundation {
         return PingFoundation(hostName: hostName, hostAddress: nil)
     }
     
-    static open func pingFoundationWithHostAddress(_ hostAddress:Data) -> PingFoundation {
+    static public func pingFoundationWithHostAddress(_ hostAddress:Data) -> PingFoundation {
         return PingFoundation(hostName: nil, hostAddress: hostAddress)
     }
 }
